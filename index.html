@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- UK Targeted SEO Metadata -->
+    <title>Free Word & Character Counter UK | Essay & Reading Time Checker</title>
+    <meta name="description" content="Fast, free online word counter tool for UK students, bloggers, and essay writers. Calculate words, characters, sentences, paragraph density, and reading time instantly.">
+    <meta name="keywords" content="free online word counter UK, essay word count tool, character limit checker free, check reading time online, UK CV character counter">
+    <meta name="robots" content="index, follow">
+    
+    <style>
+        :root {
+            --primary-color: #2b6cb0;
+            --bg-color: #f7fafc;
+            --card-bg: #ffffff;
+            --text-color: #2d3748;
+            --border-color: #e2e8f0;
+            --accent-color: #3182ce;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            color: #1a202c;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            color: #718096;
+            font-size: 1.05rem;
+        }
+
+        /* Ad Slots Placeholder */
+        .ad-banner {
+            background-color: #edf2f7;
+            border: 1px dashed #cbd5e0;
+            text-align: center;
+            padding: 15px;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            color: #a0aec0;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        /* Live Stats Bar (Notebook Box A, B, C, D) */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .stat-card {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            text-align: center;
+        }
+
+        .stat-card h3 {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #718096;
+            margin-bottom: 5px;
+        }
+
+        .stat-card .number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        /* Main Input Box */
+        .editor-container {
+            margin-bottom: 25px;
+        }
+
+        textarea {
+            width: 100%;
+            height: 280px;
+            padding: 18px;
+            border: 2px solid var(--border-color);
+            border-radius: 10px;
+            font-size: 1.1rem;
+            resize: vertical;
+            outline: none;
+            transition: border-color 0.2s ease;
+            background: var(--card-bg);
+        }
+
+        textarea:focus {
+            border-color: var(--accent-color);
+        }
+
+        .action-btns {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #2c5282;
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: #4a5568;
+            border: 1px solid #cbd5e0;
+        }
+
+        .btn-outline:hover {
+            background: #edf2f7;
+        }
+
+        /* Keyword Density Analysis */
+        .density-section {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid var(--border-color);
+            margin-bottom: 25px;
+        }
+
+        .density-section h2 {
+            font-size: 1.2rem;
+            margin-bottom: 12px;
+            color: #2d3748;
+        }
+
+        .keyword-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .keyword-badge {
+            background: #ebf8ff;
+            color: #2b6cb0;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            border: 1px solid #bee3f8;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            color: #a0aec0;
+            font-size: 0.85rem;
+            border-top: 1px solid var(--border-color);
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Nexiforge Branding + Header -->
+<nav style="display: flex; justify-content: space-between; align-items: center; padding: 12px 0; margin-bottom: 20px; border-bottom: 2px solid #e2e8f0;">
+    <div style="font-size: 1.2rem; font-weight: 800; color: #2b6cb0; display: flex; align-items: center; gap: 8px;">
+        <span style="background: #2b6cb0; color: white; padding: 4px 10px; border-radius: 6px; font-size: 0.9rem; letter-spacing: 0.5px;">NEXIFORGE</span>
+        <span>Media Studio</span>
+    </div>
+    <div style="font-size: 0.85rem; color: #718096; font-weight: 600; background: #edf2f7; padding: 4px 12px; border-radius: 20px;">
+        UK Web Utility Tools
+    </div>
+</nav>
+
+<header style="text-align: center; margin-bottom: 25px;">
+    <h1 style="font-size: 2.2rem; color: #1a202c; margin-bottom: 8px;">UK Online Word & Character Counter</h1>
+    <p style="color: #718096; font-size: 1.05rem;">Fast, free & reliable text analyzer for essays, assignments, and CVs</p>
+</header>
+
+    <!-- Top Ad Slot (Header Ad) -->
+    <div class="ad-banner">
+        [ AdSense Top Banner Placement Zone - Reserved ]
+    </div>
+
+    <!-- Live Stats Bar -->
+    <div class="stats-grid">
+        <div class="stat-card">
+            <h3>Total Words</h3>
+            <div class="number" id="wordCount">0</div>
+        </div>
+        <div class="stat-card">
+            <h3>Characters (Inc. Spaces)</h3>
+            <div class="number" id="charCount">0</div>
+        </div>
+        <div class="stat-card">
+            <h3>Sentences</h3>
+            <div class="number" id="sentenceCount">0</div>
+        </div>
+        <div class="stat-card">
+            <h3>Est. Reading Time</h3>
+            <div class="number" id="readingTime">0 min</div>
+        </div>
+    </div>
+
+    <!-- Input Textarea -->
+    <div class="editor-container">
+        <textarea id="textInput" placeholder="Type or paste your essay/text here to analyze..."></textarea>
+        <div class="action-btns">
+            <button class="btn" onclick="clearText()">Clear Text</button>
+            <button class="btn btn-outline" onclick="copyText()">Copy Text</button>
+        </div>
+    </div>
+
+    <!-- Top Keywords Density Section -->
+    <div class="density-section">
+        <h2>Top Keyword Density (Repeated Words)</h2>
+        <div class="keyword-list" id="keywordList">
+            <span style="color: #a0aec0; font-size: 0.9rem;">Start typing above to see top word density...</span>
+        </div>
+    </div>
+
+    <!-- Bottom Ad Slot -->
+    <div class="ad-banner">
+        [ AdSense Bottom Banner Placement Zone - Reserved ]
+    </div>
+
+    <footer>
+        <p>© 2026 Nexiforge Media Studio - Fast UK Web Utility Tools</p>
+    </footer>
+</div>
+
+<script>
+    const textInput = document.getElementById('textInput');
+    const wordCount = document.getElementById('wordCount');
+    const charCount = document.getElementById('charCount');
+    const sentenceCount = document.getElementById('sentenceCount');
+    const readingTime = document.getElementById('readingTime');
+    const keywordList = document.getElementById('keywordList');
+
+    textInput.addEventListener('input', analyzeText);
+
+    function analyzeText() {
+        const text = textInput.value;
+
+        // 1. Character Count
+        charCount.innerText = text.length;
+
+        // 2. Word Count
+        const words = text.trim().split(/\s+/).filter(word => word.length > 0);
+        wordCount.innerText = text.trim() === '' ? 0 : words.length;
+
+        // 3. Sentence Count
+        const sentences = text.split(/[.!?]+/).filter(sentence => sentence.trim().length > 0);
+        sentenceCount.innerText = sentences.length;
+
+        // 4. Reading Time (Average 200 words per minute)
+        const minutes = Math.ceil(words.length / 200);
+        readingTime.innerText = words.length === 0 ? '0 min' : `${minutes} min read`;
+
+        // 5. Keyword Density Analysis
+        updateKeywordDensity(words);
+    }
+
+    function updateKeywordDensity(words) {
+        if (words.length < 3) {
+            keywordList.innerHTML = '<span style="color: #a0aec0; font-size: 0.9rem;">Start typing above to see top word density...</span>';
+            return;
+        }
+
+        const frequencyMap = {};
+        const stopWords = new Set(["the", "is", "at", "which", "on", "a", "an", "and", "or", "in", "to", "for", "of", "with", "it", "this", "that", "you", "i"]);
+
+        words.forEach(word => {
+            const cleanWord = word.toLowerCase().replace(/[^a-zA-Z0-0]/g, "");
+            if (cleanWord.length > 2 && !stopWords.has(cleanWord)) {
+                frequencyMap[cleanWord] = (frequencyMap[cleanWord] || 0) + 1;
+            }
+        });
+
+        const sortedKeywords = Object.entries(frequencyMap)
+            .sort((a, b) => b[1] - a[1])
+            .slice(0, 8);
+
+        if (sortedKeywords.length === 0) {
+            keywordList.innerHTML = '<span style="color: #a0aec0; font-size: 0.9rem;">Keep typing to calculate density...</span>';
+            return;
+        }
+
+        keywordList.innerHTML = sortedKeywords
+            .map(([word, count]) => `<span class="keyword-badge"><strong>${word}</strong> (${count})</span>`)
+            .join('');
+    }
+
+    function clearText() {
+        textInput.value = '';
+        analyzeText();
+    }
+
+    function copyText() {
+        if (textInput.value.trim() !== '') {
+            navigator.clipboard.writeText(textInput.value);
+            alert('Text copied to clipboard!');
+        }
+    }
+</script>
+
+</body>
+</html>
